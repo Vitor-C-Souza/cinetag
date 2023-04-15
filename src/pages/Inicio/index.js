@@ -1,5 +1,5 @@
 import Banner from "components/Banner/index.js";
-import Card from "components/Card/index.js";
+import { Card } from "components/Card/index.js";
 import Titulo from "components/Titulo/index.js";
 import Videos from "json/db.json";
 import React from "react";

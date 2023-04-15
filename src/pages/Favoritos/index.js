@@ -2,9 +2,11 @@ import Banner from "components/Banner/index.js";
 import styles from "./Favoritos.module.css";
 import React from "react";
 import Titulo from "components/Titulo/index.js";
-import { CardFavorito } from "components/Card/index.js";
+import Card from "components/Card/index.js";
+import { useFavoritoContext } from "Contextos/Favoritos.js";
 
 export default function Favoritos() {
+  const { favorito } = useFavoritoContext();
   return (
     <>
       <Banner imagem="favoritos" />
@@ -12,7 +14,9 @@ export default function Favoritos() {
         <h1>Meus Favoritos</h1>
       </Titulo>
       <section className={styles.container}>
-         <CardFavorito  capa='https://i.pinimg.com/564x/c7/4c/a6/c74ca6827eed655aa080143a0970242f.jpg' titulo='Goku'/>        
+        {favorito.map((fav) => {
+          return <Card {...fav} key={fav.id} />;
+        })}
       </section>
     </>
   );

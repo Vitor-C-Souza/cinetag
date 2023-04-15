@@ -3,7 +3,9 @@ import Cabecalho from "components/Cabecalho/";
 import Card from "components/Card/index.js";
 import Rodape from "components/Rodape/index.js";
 import Titulo from "components/Titulo/index.js";
+import Videos from "json/db.json";
 import React from "react";
+import styles from './Inicio.module.css'
 
 export default function Inicio() {
   return (
@@ -13,7 +15,11 @@ export default function Inicio() {
       <Titulo>
         <h1>Um lugar para guardar seus vídeos e filmes!</h1>
       </Titulo>
-      <Card id='1' titulo='Goku' capa='https://i.pinimg.com/564x/c7/4c/a6/c74ca6827eed655aa080143a0970242f.jpg' />
+      <section className={styles.container}>
+        {Videos.map((video) => {
+          return <Card {...video} key={video.id} />
+        })}
+      </section>
       <Rodape />
     </>
   );

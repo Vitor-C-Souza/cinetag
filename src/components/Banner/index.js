@@ -7,8 +7,6 @@ export default function Banner({ imagem }) {
     <div
       className={styles.capa}
       style={{ backgroundImage: `url('/imagens/banner-${imagem}.png')` }}
-    >
-      Banner
-    </div>
+    ></div>
   );
 }

@@ -1,6 +1,6 @@
 import Cabecalho from "components/Cabecalho/index.js";
 import Container from "components/Container/index.js";
-import Favoritos from "components/Favoritos/index.js";
+import Favoritos from "pages/Favoritos/index.js";
 import Rodape from "components/Rodape/index.js";
 
 const { default: Inicio } = require("./pages/Inicio/index.js");

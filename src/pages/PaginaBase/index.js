@@ -1,5 +1,4 @@
 import Cabecalho from "components/Cabecalho/index.js";
-import styles from "./PaginaBase.module.css";
 import React from "react";
 import FavoritosProvider from "Contextos/Favoritos.js";
 import Container from "components/Container/index.js";

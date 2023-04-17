@@ -12,8 +12,8 @@ export default function Player() {
     return video.id === Number(parametros.id);
   });
 
-  if(!video) {
-    return <NaoEncontrado />
+  if (!video) {
+    return <NaoEncontrado />;
   }
   return (
     <>
